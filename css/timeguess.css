@@ -30,7 +30,7 @@ body.defaultBackground {
   background-image: none;
 }
 body.tenSecond {
-  background-image: url('./img/fireworks.gif');
+  background-image: url('../img/fireworks.gif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -192,6 +192,12 @@ footer>p {
     margin: 0px;
     padding: 0px;
   }
+/*mobile view*/
+  body {
+    background-position: 50% 0%;
+    background-size: auto 1000px;
+}
+
 
 }
 
