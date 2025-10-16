@@ -54,7 +54,8 @@ stop.addEventListener("click",
     const checkTimer = Date.now() - startTime ;
     if(checkTimer>10000 && checkTimer < 11000) {
       soundControl("start", "./sound/stop2.mp3") ;
-      document.body.classList.add("tenSecond")
+      document.body.classList.remove("defaultBackground");
+      document.body.classList.add("tenSecond");
     }else{
       soundControl("start", "./sound/stop1.mp3");
     }
@@ -80,6 +81,8 @@ reset.addEventListener("click",
       soundEndflag = "1";
     // ボタンを"初期"状態とする
     setButtonStateInitial();
+    document.body.classList.remove("tenSecond");
+    document.body.classList.add("defaultBackground");
     timer.textContent = "00:00.000";
     stopTime = 0;
   }
