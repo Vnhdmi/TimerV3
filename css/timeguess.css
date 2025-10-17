@@ -118,6 +118,7 @@ i {
 
 #timer {
     font-size: 50px;
+    user-select: none ;
 }
 
 .timer-fontColor_hidden {
