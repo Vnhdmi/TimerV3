@@ -12,9 +12,6 @@ body {
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     text-align: center;
     background-color: rgba(233, 168, 227, 0.6);
-    background-blend-mode: soft-light;
-    /* background-image: url(../img/backimg.JPG);
-  background-size: cover; */
     overflow: hidden;
 }
 
@@ -29,6 +26,9 @@ body.tenSecond {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+.message-container.tenSecond {
+  color: yellow;
 }
 
 
@@ -90,6 +90,7 @@ header {
     font-size: 2em;
     font-weight: bold;
     overflow: hidden;
+    color: black;
 }
 
 .time-container {

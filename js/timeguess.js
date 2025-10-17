@@ -1,6 +1,6 @@
 "use strict";
 
-
+const message = document.querySelector(".message-container")
 const timer = document.getElementById("timer");
 const start = document.getElementById("start");
 const stop = document.getElementById("stop");
@@ -44,18 +44,12 @@ if (soundEndflag === "1") {
 ////////////////////////
 stop.addEventListener("click",
   function() {
-
-
-    // if (soundEndflag === "1") {
-    //   soundControl("end",);
-    //   }
-    //   soundControl("start", "./sound/stop1.mp3"); //サウンド
-    //   soundEndflag = "1";
     const checkTimer = Date.now() - startTime ;
     if(checkTimer>10000 && checkTimer < 11000) {
       soundControl("start", "./sound/stop2.mp3") ;
       document.body.classList.remove("defaultBackground");
       document.body.classList.add("tenSecond");
+      message.classList.add("tenSecond");
     }else{
       soundControl("start", "./sound/stop1.mp3");
     }
@@ -83,6 +77,8 @@ reset.addEventListener("click",
     setButtonStateInitial();
     document.body.classList.remove("tenSecond");
     document.body.classList.add("defaultBackground");
+    // document.querySelector(".message-container").classList.add(".message-container.tenSecond"); dekinai :(
+      message.classList.remove("tenSecond");
     timer.textContent = "00:00.000";
     stopTime = 0;
   }
